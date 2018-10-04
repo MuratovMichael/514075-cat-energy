@@ -1,0 +1,127 @@
+.catalog {
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  border-bottom: 1px solid @border-bottom-item;
+}
+
+.catalog__container {
+  padding: 0 20px;
+}
+
+.catalog__main-title {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 36px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  color: @main-color-title;
+  text-align: center;
+  padding-top: 25px;
+  margin: 0;
+}
+
+.catalog__list {
+  display: flex;
+  flex-direction: column;
+  .set-list(0, 0, none);
+  margin-top: 35px;
+}
+
+.catalog__item {
+  min-height: 160px;
+  margin-bottom: 20px;
+  padding: 25px 0;
+  border-top: 1px solid @border-bottom-item;
+  border-bottom: 1px solid @border-bottom-item;
+  width: 100%;
+}
+
+.catalog__item:not(:first-child) {
+  border-top: 0;
+}
+
+.catalog__item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.catalog__wrapper-info {
+  width: 140px;
+}
+
+.catalog__name-product-link {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  color: @main-color-title;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.catalog__title {
+  padding-right: 25px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.catalog__title--padding-bottom {
+  padding-bottom: 0;
+}
+
+.catalog__row {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+}
+
+.catalog__cell {
+  font-weight: normal;
+}
+
+.catalog__link-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  min-height: 40px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  color: @white-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: @color-link;
+  margin-top: 20px;
+}
+
+.catalog__show-text {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  color: @main-color-title;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.catalog__more-text {
+  font-size: 12px;
+  color: @main-font-color;
+  text-align: center;
+}
+
+.catalog__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  min-height: 40px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  color: @main-font-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: @background-sample;
+  border: none;
+  font-size: 16px;
+}

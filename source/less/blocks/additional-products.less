@@ -1,0 +1,81 @@
+.additional-products {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.additional-products__container {
+  padding: 0 20px;
+}
+
+.additional-products__title {
+  font-size: 24px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  line-height: 24px;
+  color: @main-color-title;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.additional-products__list {
+  display: flex;
+  flex-direction: column;
+  .set-list(0, 0, none);
+}
+
+.additional-products__item {
+  border-top: 1px solid @border-color;
+  margin-bottom: 17px;
+}
+
+.additional-products__item:last-child {
+  border-bottom: 1px solid @border-color;
+  padding-bottom: 17px;
+}
+
+.additional-products__name-product {
+  font-size: 16px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  line-height: 16px;
+  color: @name-product-additional;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0;
+  padding-top: 15px;
+}
+
+.additional-products__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.additional-products__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  min-height: 40px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  color: @white-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: @color-link;
+  border: none;
+}
+
+.additional-products__order {
+  width: 280px;
+  height: 289px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.additional-products__text {
+  font-size: 16px;
+  line-height: 20px;
+  color: @white-color;
+  text-align: center;
+  padding: 190px 50px 0 50px;
+}
