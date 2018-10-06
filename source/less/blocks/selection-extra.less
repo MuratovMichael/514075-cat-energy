@@ -1,0 +1,82 @@
+.selection-extra__title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  color: @main-color-title;
+  text-align: left;
+  margin: 25px 0 35px 0;
+}
+
+.selection-extra__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.selection-extra__input {
+  display: none;
+}
+
+.selection-extra__label {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  color: @label-color-title;
+  text-align: left;
+  text-transform: uppercase;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-top: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @border-checkbox-button;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 10px;
+    border: 1px solid transparent;
+  }
+}
+
+.selection-extra__input:checked + .selection-extra__label::after {
+  top: 6px;
+  left: 6px;
+  transform: rotate(-45deg);
+  border: 1px solid @color-link;
+  border-top-style: none;
+  border-right-style: none;
+}
+
+.selection-extra__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  width: 280px;
+  height: 40px;
+  background-color: @color-link;
+  color: @white-color;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 40px;
+}
+
+.selection-extra__sup {
+  text-align: center;
+}

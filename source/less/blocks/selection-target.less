@@ -1,0 +1,56 @@
+.selection-target {
+  display: flex;
+  flex-direction: column;
+  padding: 23px 0 6px 0;
+  border-top: 1px solid @border-bottom-item;
+  border-bottom: 1px solid @border-bottom-item;
+}
+
+.selection-target__wrapper {
+  padding-bottom: 22px;
+}
+
+.selection-target__label {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+  color: @label-color-title;
+  text-align: left;
+  text-transform: uppercase;
+  margin-right: auto;
+}
+
+.selection-target__input {
+  display: none;
+}
+
+.selection-target__label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 45px;
+}
+
+.selection-target__label::before,
+.selection-target__label::after {
+  content: "";
+  position: absolute;
+}
+
+.selection-target__label::before {
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @border-radio-button;
+  border-radius: 50%;
+}
+
+.selection-target__input:checked + .selection-target__label::after {
+  top: 10px;
+  left: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: @color-link;
+  border-radius: 50%;
+}

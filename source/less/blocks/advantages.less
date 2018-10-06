@@ -1,7 +1,7 @@
 .advantages {
   width: 320px;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 25px;
 }
 
 .advantages__container {
@@ -14,11 +14,31 @@
   line-height: 36px;
   font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
   color: @main-color-title;
-  text-align: center;
+  text-align: left;
   padding-bottom: 15px;
+}
+
+.advantages__text {
+  margin: 0;
 }
 
 .advantages__list {
   .set-list(0, 0, none);
   padding-left: 80px;
+}
+
+.advantages__item {
+  margin-bottom: 20px;
+
+  &--fastfood {
+    padding-top: 5px;
+  }
+
+  &--eat {
+    padding-top: 8px;
+  }
+
+  &--time {
+    padding-top: 8px;
+  }
 }

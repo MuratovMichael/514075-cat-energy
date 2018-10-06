@@ -1,7 +1,7 @@
 .additional-products {
   width: 320px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 10px 0 38px 0;
 }
 
 .additional-products__container {
@@ -13,8 +13,8 @@
   font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
   line-height: 24px;
   color: @main-color-title;
-  text-transform: uppercase;
-  text-align: center;
+  text-align: left;
+  margin-bottom: 33px;
 }
 
 .additional-products__list {
@@ -25,7 +25,7 @@
 
 .additional-products__item {
   border-top: 1px solid @border-color;
-  margin-bottom: 17px;
+  margin-bottom: 18px;
 }
 
 .additional-products__item:last-child {
@@ -41,7 +41,17 @@
   text-transform: uppercase;
   text-align: left;
   margin: 0;
-  padding-top: 15px;
+  padding: 13px 0 13px 0;
+}
+
+.additional-products__weight {
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.additional-products__price {
+  display: block;
+  margin-top: -15px;
 }
 
 .additional-products__info {
@@ -62,14 +72,15 @@
   text-transform: uppercase;
   background-color: @color-link;
   border: none;
+  margin-top: -5px;
 }
 
 .additional-products__order {
   width: 280px;
-  height: 289px;
+  height: 295px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 8px;
 }
 
 .additional-products__text {
