@@ -9,6 +9,7 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  margin-bottom: 14px;
 }
 
 .selection-options__label {
@@ -30,7 +31,6 @@
   color: @main-font-color;
   border: 1px solid @border-input;
   text-transform: uppercase;
-  margin-bottom: 14px;
   padding-left: 15px;
   box-sizing: border-box;
 
@@ -43,5 +43,122 @@
     width: 173px;
     height: 45px;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .selection-options {
+    display: flex;
+    flex-direction: column;
+    width: 630px;
+    margin:  0 auto;
+    padding-bottom: 23px;
+    border-bottom: none;
+  }
+
+  .selection-options__wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  .selection-options__label {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+    color: @label-color-title;
+    text-align: left;
+    text-transform: uppercase;
+    margin-right: auto;
+  }
+
+  .selection-options__input {
+    font-size: 20px;
+    font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+    width: 230px;
+    height: 45px;
+    color: @main-font-color;
+    border: 1px solid @border-input;
+    text-transform: uppercase;
+    padding-left: 15px;
+    box-sizing: border-box;
+
+    &--sizes-middle {
+      width: 535px;
+      height: 52px;
+    }
+
+    &--sizes-small {
+      width: 497px;
+      height: 52px;
+      margin-top: -2px;
+      margin-bottom: 0;
+    }
+  }
+
+  .selection-options__input--sizes-large {
+    width: 565px;
+    height: 52px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .selection-options {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    margin-left: 10px;
+    padding-bottom: 23px;
+    border-bottom: none;
+  }
+
+  .selection-options__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .selection-options__label {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+    color: @label-color-title;
+    text-align: left;
+    text-transform: uppercase;
+    margin-right: auto;
+  }
+
+  .selection-options__input {
+    font-size: 20px;
+    font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+    width: 230px;
+    height: 45px;
+    color: @main-font-color;
+    border: 1px solid @border-input;
+    text-transform: uppercase;
+    padding-left: 15px;
+    box-sizing: border-box;
+
+    &--sizes-middle {
+      width: 475px;
+      height: 52px;
+    }
+
+    &--sizes-small {
+      width: 436px;
+      height: 52px;
+      margin-top: -2px;
+      margin-bottom: 0;
+    }
+  }
+
+  .selection-options__input--sizes-large {
+    width: 506px;
+    height: 52px;
   }
 }

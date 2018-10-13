@@ -2,3 +2,39 @@
   display: none;
   .set-list(0, 0, none);
 }
+
+@media(min-width: 768px) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 440px;
+  }
+
+  .site-list__link {
+    font-size: 18px;
+    font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: @name-product-additional;
+  }
+}
+
+@media(min-width: 1300px) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 478px;
+  }
+
+  .site-list__link {
+    font-size: 20px;
+    font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: @white-color;
+  }
+}
