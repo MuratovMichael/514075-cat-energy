@@ -1,17 +1,18 @@
 .map {
   width: 320px;
   margin: 0 auto;
-  padding-top: 25px;
+  padding-top: 10px;
+  background-color: @background-sample;
 }
 
 .map__container {
-  padding: 0 20px;
+  padding: 15px 20px 15px 20px;
 }
 
 .map__cooperation {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .map__dilers {
@@ -20,8 +21,125 @@
   line-height: 20px;
   color: @main-color-title;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .map__address {
-  padding-top: 5px;
+  margin: 0;
+  padding: 5px 0 0 20px;
+}
+
+.map img {
+  width: 320px;
+  height: 400px;
+  margin: 0 auto;
+  display: none;
+}
+
+iframe {
+  border: none;
+  width: 320px;
+  height: 360px;
+}
+
+@media (min-width: 768px) {
+  .map {
+    width: 768px;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: @white-color;
+  }
+
+  .map__container {
+    .container-tablet();
+  }
+
+  .map__cooperation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    min-height: 200px;
+  }
+
+  .map__dilers {
+    padding: 0 300px 0 40px;
+    margin-top: -15px;
+  }
+
+  .map__address {
+    margin-top: -30px;
+    padding: 5px 0 0 60px;
+    text-align: right;
+  }
+
+  .map img {
+    width: 768px;
+    height: 395px;
+    margin: 0 auto;
+    display: none;
+  }
+
+  iframe {
+    border: none;
+    width: 768px;
+    height: 395px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .map {
+    width: auto;
+    margin: 0 auto;
+    padding-top: 0;
+    background-color: @background-sample;
+  }
+
+  .map__container {
+    position: relative;
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .map__cooperation {
+    position: absolute;
+    top: 95px;
+    left: 37px;
+    width: 570px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    background-color: @white-color;
+  }
+
+  .map__dilers {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 0;
+    padding: 0 180px 0 75px;
+  }
+
+  .map__address {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 0;
+    margin-left: -95px;
+    padding: 0;
+    padding-right: 60px;
+    text-align: left;
+  }
+
+  .map img {
+    width: auto;
+    height: 395px;
+    margin: 0 auto;
+    display: none;
+  }
+
+  iframe {
+    border: none;
+    width: 100%;
+    height: 399px;
+  }
 }

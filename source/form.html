@@ -5,138 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo-link" href="index.html">
-        <img class="page-header__image-logo" src="img/logo.png" width="" height="" alt="Логотип">
-      </a>
-      <a class="page-header__logo-name" href="#">
-        <img class="page-header__image-name" src="img/logo-name.png" width="" height="" alt="Кэт Энерджи">
-      </a>
-      <nav class="navigation">
-        <button class="navigation__button" type="button">Кнопка</button>
-        <ul class="navigation__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__container">
+        <a class="page-header__logo-link" href="#">
+          <img class="page-header__image-logo" src="img/logo" width="124" height="106" alt="Логотип">
+        </a>
+        <nav class="navigation">
+          <button class="navigation__button" type="button">Кнопка</button>
+          <ul class="navigation__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--color" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--color" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--color" href="programs.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <section class="selection-programs">
-        <h1 class="selection-programs__title">Подбор программы</h1>
-        <p class="selection-programs__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <form class="selection-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="selection-programs__container">
+          <h1 class="selection-programs__title">Подбор программы</h1>
+          <p class="selection-programs__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+          <form class="selection-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="selection-form__flex-wrapper">
+              <div class="selection-options">
+                <div class="selection-options__wrapper">
+                  <label class="selection-options__label" for="name">Имя:<sup>*</sup></label>
+                  <input class="selection-options__input selection-options__input--sizes-large" type="text" name="name" id="name" placeholder="Барсик">
+                </div>
+                <div class="selection-options__wrapper">
+                  <label class="selection-options__label" for="weight">Вес (кг):<sup>*</sup></label>
+                  <input class="selection-options__input selection-options__input--sizes-middle" type="text" name="weight" id="weight" placeholder="7">
+                </div>
+                <div class="selection-options__wrapper">
+                  <label class="selection-options__label" for="age">Возраст (лет):</label>
+                  <input class="selection-options__input selection-options__input--sizes-small" type="text" name="age" id="age" placeholder="7">
+                </div>
+              </div>
 
-          <div class="selection-options">
-            <div class="selection-options__wrapper">
-              <label class="selection-options__label" for="name">Имя:<sup>*</sup></label>
-              <input class="selection-options__input" type="text" name="name" id="name" placeholder="Барсик">
+              <div class="selection-target">
+                <div class="selection-target__wrapper">
+                  <input class="selection-target__input" type="radio" name="target" id="losing" checked>
+                  <label class="selection-target__label" for="losing">Похудение</label>
+                </div>
+                <div class="selection-target__wrapper">
+                  <input class="selection-target__input" type="radio" name="target" id="weight-gain">
+                  <label class="selection-target__label" for="weight-gain">Набор массы</label>
+                </div>
+                <div class="selection-target__wrapper">
+                  <input class="selection-target__input" type="radio" name="target" id="advice">
+                  <label class="selection-target__label" for="advice">Не знаю (нужен ваш совет)</label>
+                </div>
+              </div>
             </div>
-            <div class="selection-options__wrapper">
-              <label class="selection-options__label" for="weight">Вес (кг):<sup>*</sup></label>
-              <input class="selection-options__input" type="text" name="weight" id="weight" placeholder="7">
-            </div>
-            <div class="selection-options__wrapper">
-              <label class="selection-options__label" for="age">Возраст (лет):</label>
-              <input class="selection-options__input" type="text" name="age" id="age" placeholder="7">
-            </div>
-          </div>
 
-          <div class="selection-target">
-            <div class="selection-target__wrapper">
-              <label class="selection-target__label" for="losing">Похудение</label>
-              <input class="selection-target__input" type="radio" name="target" id="losing">
+            <div class="selection-contacts">
+              <h2 class="selection-contacts__title">Контактные данные (владельца кота)</h2>
+              <div class="selection-contacts__flex-wrapper">
+                <div class="selection-contacts__wrapper">
+                  <label class="selection-contacts__label" for="email">E-mail:*</label>
+                  <input class="selection-contacts__input selection-contacts__input--large" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+                </div>
+                <div class="selection-contacts__wrapper">
+                  <label class="selection-contacts__label" for="tel">Телефон:*</label>
+                  <input class="selection-contacts__input selection-contacts__input--middle" type="tel" name="tel" id="tel"placeholder="8 (960) 900-60-90">
+                </div>
+              </div>
             </div>
-            <div class="selection-target__wrapper">
-              <label class="selection-target__label" for="weight">Набор массы</label>
-              <input class="selection-target__input" type="radio" name="target" id="weight">
-            </div>
-            <div class="selection-target__wrapper">
-              <label class="selection-target__label" for="advice">Не знаю (нужен ваш совет)</label>
-              <input class="selection-target__input" type="radio" name="target" id="advice">
-            </div>
-          </div>
 
-          <div class="selection-contacts">
-            <h2 class="selection-contacts__title">Контактные данные (владельца кота)</h2>
-            <div class="selection-contacts__wrapper">
-              <label class="selection-contacts__label" for="email">E-mail:*</label>
-              <input class="selection-contacts__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+            <div class="selection-comment">
+              <h2 class="selection-comment__title">Комментарий</h2>
+              <textarea class="selection-comment__textarea" name="comment" rows="7" cols="20" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
-            <div class="selection-contacts__wrapper">
-              <label class="selection-contacts__label" for="tel">Телефон:*</label>
-              <input class="selection-contacts__input" type="tel" name="tel" id="tel"placeholder="8 (960) 900-60-90">
-            </div>
-          </div>
 
-          <div class="selection-comment">
-            <h2 class="selection-comment__title">Комментарий</h2>
-            <textarea class="selection-comment__textarea" name="comment" rows="8" cols="20" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </div>
-
-          <div class="selection-extra">
-            <div class="selection-extra__wrapper">
-              <label class="selection-extra__label" for="sugar">Сахорозаменитель</label>
-              <input class="selection-extra__input" type="checkbox" name="sugar" id="sugar">
+            <div class="selection-extra">
+              <h2 class="selection-extra__title">Дополнительно</h2>
+              <div class="selection-extra__container">
+                <div class="selection-extra__wrapper">
+                  <input class="selection-extra__input" type="checkbox" name="sugar" id="sugar" checked>
+                  <label class="selection-extra__label" for="sugar">Сахорозаменитель</label>
+                </div>
+                <div class="selection-extra__wrapper">
+                  <input class="selection-extra__input" type="checkbox" name="water" id="water">
+                  <label class="selection-extra__label" for="water">Питьевая вода</label>
+                </div>
+                <div class="selection-extra__wrapper">
+                  <input class="selection-extra__input" type="checkbox" name="milk" id="milk">
+                  <label class="selection-extra__label" for="milk">Молоко</label>
+                </div>
+                <div class="selection-extra__wrapper">
+                  <input class="selection-extra__input" type="checkbox" name="vitamins" id="vitamins">
+                  <label class="selection-extra__label" for="vitamins">Витамины</label>
+                </div>
+              </div>
+              <div class="selection-extra__required">
+                <button class="selection-extra__button" type="button">Отправить заявку</button>
+                <p class="selection-extra__sup"><sup>*</sup> - Обязательные поля</p>
+              </div>
             </div>
-            <div class="selection-extra__wrapper">
-              <label class="selection-extra__label" for="water">Питьевая вода</label>
-              <input class="selection-extra__input" type="checkbox" name="water" id="water">
-            </div>
-            <div class="selection-extra__wrapper">
-              <label class="selection-extra__label" for="milk">Молоко</label>
-              <input class="selection-extra__input" type="checkbox" name="milk" id="milk">
-            </div>
-            <div class="selection-extra__wrapper">
-              <label class="selection-extra__label" for="vitamins">Витамины</label>
-              <input class="selection-extra__input" type="checkbox" name="vitamins" id="vitamins">
-            </div>
-            <button class="selection-extra__button" type="button">Отправить заявку</button>
-            <p><sup>*</sup> - Обязательные поля</p>
-          </div>
-        </form>
+          </form>
+        </div>
       </section>
       <section class="map">
-        <div class="map__cooperation">
-          <p class="map__dilers-text">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="map__address-text">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
+        <div class="map__container">
+          <div class="map__cooperation">
+            <p class="map__dilers">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="map__address">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
+          </div>
         </div>
+        <picture>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538511842911" width="320" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <source media="(min-width: 130px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Карта">
+        </picture>
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__logo-name" href="#">
-        <img class="page-footer__image-name" src="img/logo-name.png" width="" height="" alt="Кэт Энерджи">
-      </a>
-      <ul class="page-footer__social-list">
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
-            <span class="visually-hidden">Инстаграмм</span>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__academy">
-        <p class="page-footer__text-academy">HTML Academy</p>
-        <a class="page-footer__logo-academy" href="#">
-          <img class="page-footer__image-academy" src="img/logo-academy.png" width="" height="" alt="Логотип HTML Academy">
+      <div class="map__container">
+        <a class="page-footer__logo-name" href="#">
+          <img class="page-footer__image-name" src="img/logo-name.png" width="" height="" alt="Кэт Энерджи">
         </a>
+        <ul class="page-footer__social-list">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="#">
+              <span class="visually-hidden">Инстаграмм</span>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__academy">
+          <p class="page-footer__text-academy">HTML Academy</p>
+          <a class="page-footer__logo-academy" href="#">
+            <img class="page-footer__image-academy" src="img/logo-academy.png" width="" height="" alt="Логотип HTML Academy">
+          </a>
+        </div>
       </div>
     </footer>
   </body>

@@ -1,5 +1,5 @@
 .page-footer {
-  width: 100%;
+  width: auto;
   margin: 0 auto;
   padding: 40px 0 22px 0;
   background-color: @background-sample;
@@ -40,7 +40,6 @@
   }
 }
 
-
 .page-footer__social-item {
   width: 20px;
   height: 20px;
@@ -51,4 +50,110 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .page-footer {
+    width: auto;
+    margin: 0 auto;
+    min-height: 150px;
+    padding: 40px 0 22px 0;
+    background-color: @background-sample;
+  }
+
+  .page-footer__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .container-tablet();
+  }
+
+  .page-footer__social-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 125px;
+    margin: 0 auto;
+    .set-list(0, 0, none);
+    padding: 30px 0;
+    margin-left: 290px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75px;
+      width: 280px;
+      border-top: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -75px;
+      width: 280px;
+      border-bottom: none;
+    }
+  }
+
+  .page-footer__academy {
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .page-footer {
+    width: auto;
+    margin: 0 auto;
+    min-height: 150px;
+    padding: 40px 0 22px 0;
+    background-color: @background-sample;
+  }
+
+  .page-footer__container {
+    width: 1220px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .container-tablet();
+  }
+
+  .page-footer__social-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 125px;
+    margin: 0 auto;
+    .set-list(0, 0, none);
+    padding: 30px 0;
+    margin-left: 290px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75px;
+      width: 280px;
+      border-top: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -75px;
+      width: 280px;
+      border-bottom: none;
+    }
+  }
+
+  .page-footer__academy {
+    margin-left: 50px;
+  }
 }
