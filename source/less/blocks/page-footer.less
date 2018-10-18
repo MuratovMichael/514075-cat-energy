@@ -43,13 +43,25 @@
 .page-footer__social-item {
   width: 20px;
   height: 20px;
-  border: 1px solid red;
 }
 
 .page-footer__academy {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+}
+
+.page-footer__logo-name {
+  display: flex;
+  text-align: center;
+}
+
+.vk-icon {
+  margin-top: 5px;
+}
+
+.insta-icon {
+  margin-top: 5px;
 }
 
 @media (min-width: 768px) {
@@ -122,6 +134,14 @@
     .container-tablet();
   }
 
+  .page-footer__container--catalog {
+    padding-top: 5px;
+  }
+
+  .page-footer__logo-name {
+    margin: -5px 0 0 5px;
+  }
+
   .page-footer__social-list {
     position: relative;
     display: flex;
@@ -129,10 +149,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 125px;
-    margin: 0 auto;
     .set-list(0, 0, none);
-    padding: 30px 0;
-    margin-left: 290px;
+    margin-left: 0;
+    padding: 10px 0 30px 58px;
 
     &::before {
       content: "";
@@ -154,6 +173,56 @@
   }
 
   .page-footer__academy {
-    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    width: 165px;
+    margin-left: 0;
+    margin-right: -12px;
+  }
+
+  .page-footer__text-academy {
+    font-size: 16px;
+    margin-top: 4px;
+    margin-left: -5px;
+  }
+
+  .fb-icon {
+    margin-top: 0;
+    margin-left: -15px;
+
+    &:hover {
+      stroke: @color-link;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .vk-icon {
+    padding-top: 0;
+    margin-left: -20px;
+
+    &:hover {
+      stroke: @color-link;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .insta-icon:hover {
+    stroke: @color-link;
+  }
+
+  .insta-icon:active {
+    opacity: 0.3;
+  }
+
+  .page-footer__social-item:nth-child(2) {
+    display: block;
+    margin-top: -5px;
+    margin-left: -27px;
   }
 }

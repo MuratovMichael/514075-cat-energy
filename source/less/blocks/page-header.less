@@ -7,9 +7,46 @@
 
 .page-header__container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   .container-mobile();
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.page-header__logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+  height: 65px;
+}
+
+.page-header__button {
+  background-color: transparent;
+  border: none;
+}
+
+.logo {
+  width: 191px;
+  height: 38px;
+}
+
+.page-header__link-mobile {
+  display: block;
+  width: 191px;
+  height: 38px;
+  margin-left: -20px;
+}
+
+.page-header__link-desktop {
+  display: none;
+}
+
+.page-header__link-tablet {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -20,9 +57,39 @@
 
   .page-header__container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 40px 30px 0 30px;
+  }
+
+  .page-header__link-mobile {
+    display: block;
+  }
+
+  .page-header__link-tablet {
+    display: block;
+    width: 173px;
+    height: 0;
+  }
+
+  .page-header__link-desktop {
+    display: none;
+  }
+
+  .page-header__logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 280px;
+    height: 65px;
+  }
+
+  .page-header__button {
+    display: none;
+    background-color: transparent;
+    border: none;
   }
 }
 
@@ -42,17 +109,39 @@
     align-items: center;
     justify-content: space-between;
     width: 1220px;
-    padding: 70px 0 0 0;
+    padding: 0;
   }
 
   .page-header__logo-link {
     display: block;
-    margin-right: 700px;
+    margin: -4px 0 0 5px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   .page-main .page-header__logo-link {
     display: block;
     margin-right: 700px;
     color: black;
+  }
+
+  .page-header__link-mobile {
+    display: block;
+  }
+
+  .page-header__link-tablet {
+    display: block;
+  }
+
+  .page-header__link-desktop {
+    display: block;
+    width: 402px;
+    height: 59px;
   }
 }

@@ -32,8 +32,10 @@
 
 .promo__image {
   position: absolute;
-  top: 170px;
-  left: 0;
+  top: 165px;
+  left: 5px;
+  width: 290px;
+  height: 271px;
 }
 
 .promo__link-option {
@@ -52,6 +54,14 @@
   text-transform: uppercase;
   text-decoration: none;
   background-color: @color-link;
+
+  &:hover {
+    background-color: @color-link-hover;
+  }
+
+  &:active {
+    color: @color-link-active;
+  }
 }
 
 @media (min-width: 768px) {
@@ -60,10 +70,8 @@
     width: auto;
     margin: 0 auto;
     min-height: 850px;
+    background-image: none;
     background-color: @white-color;
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center 240px;
   }
 
   .promo__container {
@@ -98,9 +106,11 @@
 
   .promo__image {
     position: absolute;
-    top: 270px;
-    left: 120px;
+    top: 240px;
+    left: 75px;
     z-index: 0;
+    width: 660px;
+    height: 600px;
   }
 
   .promo__link-option {
@@ -125,6 +135,7 @@
 
 @media (min-width: 1300px) {
   .promo {
+    position: relative;
     min-height: 520px;
     background-color: @white-color;
     background-image: url("../../img/index-background-desktop@1x.jpg");
@@ -143,7 +154,7 @@
   .promo__intro-wrapper {
     width: 420px;
     margin-top: 0;
-    margin-left: 137px;
+    margin-left: 135px;
   }
 
   .promo__main-title {
@@ -182,5 +193,13 @@
     text-decoration: none;
     background-color: @color-link;
     margin: 53px 0 0 0;
+  }
+
+  .promo__image {
+    position: absolute;
+    top: 142px;
+    left: 605px;
+    width: 552px;
+    height: 499px;
   }
 }

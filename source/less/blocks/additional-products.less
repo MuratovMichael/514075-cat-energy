@@ -16,22 +16,7 @@
   text-align: left;
   margin-top: 0;
   margin-bottom: 30px;
-}
-
-.additional-products__list {
-  display: flex;
-  flex-direction: column;
-  .set-list(0, 0, none);
-}
-
-.additional-products__item {
-  border-top: 1px solid @border-color;
-  margin-bottom: 18px;
-}
-
-.additional-products__item:last-child {
-  border-bottom: 1px solid @border-color;
-  padding-bottom: 17px;
+  margin-left: 8px;
 }
 
 .additional-products__name-product {
@@ -300,18 +285,40 @@
   }
 
   .additional-products__title {
+    position: relative;
     font-size: 36px;
     font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
     line-height: 36px;
     color: @main-color-title;
     text-align: left;
     margin-bottom: 67px;
-    padding-left: 20px;
+    margin-top: -10px;
+    padding-left: 8px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: -103px;
+      width: 70px;
+      height: 3px;
+      background-color: @color-link;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: 380px;
+      width: 955px;
+      height: 3px;
+      background-color: @color-link;
+    }
   }
 
   .additional-products__table {
     width: 897px;
-    margin-left: 18px;
+    margin-left: 15px;
   }
 
   .additional-products__row {
@@ -319,7 +326,7 @@
     border-bottom: none;
     border-right: none;
     border-left: none;
-    padding: 10px 35px 12px 0;
+    padding: 12px 35px 12px 0;
     margin-bottom: 0;
     position: relative;
   }
@@ -336,7 +343,7 @@
   }
 
   .additional-products__row:nth-child(3) {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     margin-bottom: 0;
     margin-top: 0;
   }
@@ -408,12 +415,12 @@
 
   .additional-products__order {
     width: 245px;
-    height: 295px;
+    height: 298px;
     margin-top: 5px;
-    margin-right: -20px;
+    margin-right: -15px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center 8px;
+    background-position: center 10px;
   }
 
   .additional-products__text {
