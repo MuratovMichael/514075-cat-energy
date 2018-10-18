@@ -110,13 +110,34 @@
   }
 
   .selection-contacts__title {
+    position: relative;
     font-size: 36px;
     font-weight: 300;
     line-height: 36px;
     font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
     color: @main-color-title;
     text-align: left;
-    margin: 28px 0 75px 0;
+    margin: 30px 0 75px -5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: -110px;
+      width: 70px;
+      height: 3px;
+      background-color: @color-link;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: 555px;
+      width: 775px;
+      height: 3px;
+      background-color: @color-link;
+    }
   }
 
   .selection-contacts__wrapper {

@@ -39,7 +39,7 @@
   display: flex;
   justify-content: space-between;
   width: 200px;
-  margin: 58px 0 0 42px;
+  margin: 28px 0 0 42px;
 }
 
 .sample__was {
@@ -105,6 +105,12 @@
   width: 95px;
 }
 
+.sample__image {
+  max-width: 320px;
+  height: 240px;
+  margin-left: -20px;
+}
+
 .sample__image--after {
   display: none;
 }
@@ -153,6 +159,37 @@
   width: 80px;
   text-align: center;
   background-color: @background-sample;
+}
+
+.sample__range-controls {
+  position: relative;
+  width: 84px;
+  height: 12px;
+  border: 1px solid @border-color;
+  border-radius: 5px;
+  background-color: @white-color;
+  margin-top: 4px;
+}
+
+.sample__scale {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 35px;
+  height: 6px;
+  background-color: @color-link;
+  border-radius: 6px;
+}
+
+.sample__range-toggle {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 @media (min-width: 768px) {
@@ -364,6 +401,7 @@
 
 @media (min-width: 1300px) {
   .sample {
+    position: relative;
     width: auto;
     margin: 0 auto;
     padding-top: 78px;
@@ -377,11 +415,23 @@
   }
 
   .sample__content-wrapper {
-    position: relative;
     width: 1220px;
     margin: 0 auto;
     padding-bottom: 80px;
     background-color: @background-sample;
+  }
+
+  .sample__content-wrapper::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 180px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: linear-gradient(90deg,#f2f2f2 calc(50% + 306px),#eaeaea calc(10% + 306px));
   }
 
   .sample__title {
@@ -403,15 +453,15 @@
     justify-content: space-between;
     width: 366px;
     margin-top: 67px;
-    margin-left: 8px;
+    margin-left: 6px;
   }
 
   .sample__text {
     font-size: 16px;
     line-height: 24px;
     width: 435px;
-    padding-top: 70px;
-    padding-left: 8px;
+    padding-top: 73px;
+    padding-left: 6px;
   }
 
   .sample__weight,
@@ -482,7 +532,7 @@
     color: @main-color-title;
     text-transform: uppercase;
     text-align: center;
-    padding: 40px 0 10px 8px;
+    padding: 40px 0 10px 6px;
     width: 325px;
   }
 
@@ -506,7 +556,7 @@
   }
 
   .sample__defference {
-    margin: -50px -8px 0 auto;
+    margin: -48px -5px 0 auto;
     width: 570px;
     height: 16px;
   }
@@ -521,12 +571,15 @@
     position: relative;
     width: 428px;
     height: 16px;
+    background-color: transparent;
+    border: transparent;
   }
 
   .sample__scale {
     position: absolute;
-    top: 8px;
-    width: 428px;
+    top: 4px;
+    left: 2px;
+    width: 427px;
     height: 6px;
     background-color: @range-left;
     border-radius: 6px;

@@ -1,8 +1,20 @@
 .map {
+  position: relative;
   width: 320px;
   margin: 0 auto;
   padding-top: 10px;
   background-color: @background-sample;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 210px;
+    left: 80px;
+    width: 106px;
+    height: 124px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+  }
 }
 
 .map--bg-color {
@@ -41,6 +53,7 @@
 }
 
 iframe {
+  position: relative;
   border: none;
   width: 320px;
   height: 360px;
@@ -100,6 +113,9 @@ iframe {
   }
 
   .map__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     width: 1220px;
     margin: 0 auto;
@@ -109,6 +125,7 @@ iframe {
     position: absolute;
     top: 95px;
     left: 37px;
+    z-index: 3;
     width: 570px;
     height: 200px;
     display: flex;
