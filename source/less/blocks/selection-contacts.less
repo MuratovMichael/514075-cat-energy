@@ -178,12 +178,32 @@
       width: 486px;
       height: 52px;
       margin-left: 20px;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: 450px center;
+      background-size: 17px 13px;
     }
 
     &--middle {
       width: 472px;
       height: 52px;
       margin-left: 17px;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-position: 430px center;
+      background-size: 17px 13px;
     }
+  }
+
+  .selection-contacts__input:hover {
+    border: 1px solid @border-color;
+  }
+
+  .selection-contacts__input:active {
+    border: 2px solid @main-font-color;
+  }
+
+  .selection-contacts__input:invalid {
+    border: 2px solid @invalid-color;
   }
 }

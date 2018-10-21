@@ -8,13 +8,18 @@
   &::after {
     content: "";
     position: absolute;
-    top: 210px;
-    left: 80px;
-    width: 106px;
-    height: 124px;
+    top: 255px;
+    left: 128px;
+    width: 62px;
+    height: 53px;
     background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
+    background-size: 62px 53px;
   }
+}
+
+.map__dilers--form {
+  padding-top: 3px;
 }
 
 .map--bg-color {
@@ -38,6 +43,7 @@
   color: @main-color-title;
   text-transform: uppercase;
   margin: 0;
+  padding-top: 5px;
 }
 
 .map__address {
@@ -61,10 +67,23 @@ iframe {
 
 @media (min-width: 768px) {
   .map {
+    position: relative;
     width: 768px;
     margin: 0 auto;
-    padding-top: 10px;
+    padding-top: 0;
     background-color: @white-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 347px;
+      left: 320px;
+      width: 106px;
+      height: 124px;
+      background-image: url("../img/map-pin.png");
+      background-repeat: no-repeat;
+      background-size: 124px auto;
+    }
   }
 
   .map__container {
@@ -75,18 +94,23 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     min-height: 200px;
   }
 
   .map__dilers {
+    font-size: 20px;
+    line-height: 26px;
     padding: 0 300px 0 40px;
-    margin-top: -15px;
+    margin-top: 5px;
   }
 
   .map__address {
+    font-size: 18px;
+    line-height: 26px;
     margin-top: -30px;
-    padding: 5px 0 0 60px;
+    margin: -30px 40px 0 0;
+    padding: 25px 0 0 0;
     text-align: right;
   }
 
@@ -102,6 +126,10 @@ iframe {
     width: 768px;
     height: 395px;
   }
+
+  .map__container--background {
+    background-color: @background-sample;
+  }
 }
 
 @media (min-width: 1300px) {
@@ -110,6 +138,16 @@ iframe {
     margin: 0 auto;
     padding-top: 0;
     background-color: @background-sample;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 148px;
+      left: 1043px;
+      background-image: url("../img/map-pin.png");
+      background-repeat: no-repeat;
+      background-size: 123px auto;
+    }
   }
 
   .map__container {
