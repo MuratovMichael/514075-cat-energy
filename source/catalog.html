@@ -45,6 +45,7 @@
         <div class="catalog__container">
           <h1 class="visually-hidden">Каталог продукции</h1>
           <h2 class="catalog__main-title">Каталог продукции</h2>
+        </div>
           <ul class="catalog__list">
             <li class="catalog__item">
               <div class="catalog__item-container">
@@ -328,6 +329,9 @@
             </table>
             <div class="additional-products__order">
               <p class="additional-products__text">Закажите все и получите чехол для кота в подарок!</p>
+              <svg class="additional-products__gift" width="55" height="60">
+                <use xlink:href="img/sprite.svg#icon-gift"></use>
+              </svg>
             </div>
           </div>
         </div>
@@ -340,11 +344,11 @@
             <p class="map__address">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
           </div>
         </div>
-        <picture>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538511842911" width="320" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-          <source media="(min-width: 130px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Карта">
+        <picture class="map__picture">
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533268!2d30.320858716070596!3d59.938716481876156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538511842911" width="320" height="400" frameborder="0" allowfullscreen></iframe>
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Карта">
         </picture>
       </section>
     </main>
@@ -394,5 +398,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="picturefill.js"></script>
   </body>
 </html>

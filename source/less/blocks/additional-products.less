@@ -15,14 +15,14 @@
   line-height: 24px;
   color: @main-color-title;
   text-align: left;
-  margin-top: 0;
+  margin-top: 3px;
   margin-bottom: 30px;
   margin-left: 0;
 
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: -18px;
     width: 50px;
     height: 3px;
@@ -98,7 +98,7 @@
   border-bottom: 1px solid @border-color;
   padding-bottom: 18px;
   margin-bottom: -8px;
-  margin-top: 12px;
+  margin-top: 15px;
 }
 
 .additional-products__row:nth-child(2) {
@@ -149,7 +149,7 @@
   .additional-products__row {
     border: 1px solid @border-color;
     border-bottom: none;
-    padding: 10px 35px 27px 35px;
+    padding: 5px 35px 30px 35px;
     margin-bottom: 0;
   }
 
@@ -164,12 +164,14 @@
   }
 
   .additional-products__row:nth-child(3) {
+    padding-top: 15px;
     padding-bottom: 27px;
     margin-bottom: 0;
     margin-top: 0;
   }
 
   .additional-products__row:nth-child(4) {
+    padding-top: 8px;
     padding-bottom: 27px;
     margin-bottom: 6px;
     margin-top: 0;
@@ -303,15 +305,15 @@
     line-height: 36px;
     color: @main-color-title;
     text-align: left;
-    margin-bottom: 67px;
-    margin-top: -10px;
-    padding-left: 8px;
+    margin-bottom: 63px;
+    margin-top: -8px;
+    padding-left: 15px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 23px;
-      left: -103px;
+      top: 22px;
+      left: -95px;
       width: 70px;
       height: 3px;
       background-color: @color-link;
@@ -321,8 +323,8 @@
       content: "";
       position: absolute;
       top: 23px;
-      left: 380px;
-      width: 955px;
+      left: 390px;
+      width: 950px;
       height: 3px;
       background-color: @color-link;
     }
@@ -355,12 +357,14 @@
   }
 
   .additional-products__row:nth-child(3) {
+    padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 0;
     margin-top: 0;
   }
 
   .additional-products__row:nth-child(4) {
+    padding-top: 13px;
     padding-bottom: 12px;
     margin-bottom: 6px;
     margin-top: 0;
@@ -426,6 +430,7 @@
   }
 
   .additional-products__order {
+    position: relative;
     width: 245px;
     height: 298px;
     margin-top: 5px;
@@ -433,6 +438,12 @@
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center 10px;
+  }
+
+  .additional-products__gift {
+    position: absolute;
+    top: 75px;
+    left: 95px;
   }
 
   .additional-products__text {

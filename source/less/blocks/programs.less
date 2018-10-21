@@ -97,6 +97,7 @@
 }
 
 .programs__link-catalog {
+  position: relative;
   display: block;
   font-size: 16px;
   font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
@@ -109,6 +110,18 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.programs__arrow--first {
+  position: absolute;
+  top: 10px;
+  left: 96px;
+}
+
+.programs__arrow--second {
+  position: absolute;
+  top: 10px;
+  left: 95px;
 }
 
 @media (min-width: 768px) {
@@ -224,6 +237,18 @@
     text-align: left;
     padding-top: 40px;
     text-decoration: none;
+  }
+
+  .programs__arrow--first {
+    position: absolute;
+    top: 45px;
+    left: 130px;
+  }
+
+  .programs__arrow--second {
+    position: absolute;
+    top: 45px;
+    left: 125px;
   }
 }
 

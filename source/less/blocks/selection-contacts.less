@@ -1,4 +1,5 @@
 .selection-contacts__title {
+  position: relative;
   font-size: 24px;
   font-weight: 300;
   line-height: 24px;
@@ -6,13 +7,23 @@
   color: @main-color-title;
   text-align: left;
   margin: 28px 0 33px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 200px;
+    width: 100px;
+    height: 3px;
+    background-color: @color-link;
+  }
 }
 
 .selection-contacts__wrapper {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .selection-contacts__label {
@@ -58,6 +69,26 @@
     color: @main-color-title;
     text-align: left;
     margin: 28px 0 75px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 21px;
+      left: -70px;
+      width: 30px;
+      height: 3px;
+      background-color: @color-link;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 555px;
+      width: 145px;
+      height: 3px;
+      background-color: @color-link;
+    }
   }
 
   .selection-contacts__wrapper {
@@ -141,6 +172,7 @@
   }
 
   .selection-contacts__wrapper {
+    position: relative;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -173,26 +205,30 @@
     text-transform: uppercase;
     padding-left: 15px;
     box-sizing: border-box;
+  }
 
-    &--large {
-      width: 486px;
-      height: 52px;
-      margin-left: 20px;
-      background-image: url("../img/icon-mail.svg");
-      background-repeat: no-repeat;
-      background-position: 450px center;
-      background-size: 17px 13px;
-    }
+  .selection-contacts__icon-phone {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+  }
 
-    &--middle {
-      width: 472px;
-      height: 52px;
-      margin-left: 17px;
-      background-image: url("../img/icon-phone.svg");
-      background-repeat: no-repeat;
-      background-position: 430px center;
-      background-size: 17px 13px;
-    }
+  .selection-contacts__icon-mail {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+  }
+
+  .selection-contacts__input--large {
+    width: 486px;
+    height: 52px;
+    margin-left: 20px;
+  }
+
+  .selection-contacts__input--middle {
+    width: 472px;
+    height: 52px;
+    margin-left: 17px;
   }
 
   .selection-contacts__input:hover {
