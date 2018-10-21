@@ -2,7 +2,7 @@
   width: 100%;
   margin: 0 auto;
   padding-top: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
   background-color: @background-sample;
 }
 
@@ -194,11 +194,22 @@
 
 @media (min-width: 768px) {
   .sample {
-    width: 100%;
+    position: relative;
+    width: auto;
     margin: 0 auto;
     padding-top: 45px;
-    padding-bottom: 40px;
+    padding-bottom: 0;
     background-color: @white-color;
+  }
+
+  .sample::before {
+    content: "";
+    position: absolute;
+    top: 620px;
+    left: 0;
+    width: 100%;
+    height: 462px;
+    background-color: @background-sample;
   }
 
   .sample__container {
@@ -346,9 +357,11 @@
 
   .sample__image {
     position: absolute;
-    top: -200px;
-    left: 0;
+    top: -170px;
+    left: 40px;
     z-index: 2;
+    min-width: 677px;
+    height: 515px;
   }
 
   .sample__cat-before {
@@ -369,6 +382,10 @@
   }
 
   .sample__defference {
+    position: absolute;
+    bottom: 77px;
+    left: 58px;
+    z-index: 3;
     margin-top: 50px;
     width: 570px;
     height: 16px;
@@ -378,24 +395,45 @@
     position: relative;
     width: 428px;
     height: 16px;
+    background-color: transparent;
+    border: transparent;
   }
 
   .sample__scale {
     position: absolute;
     width: 428px;
-    height: 2px;
+    height: 6px;
     background-color: @range-left;
+  }
+
+  .sample__was,
+  .sample__become {
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .sample__range-toggle {
     position: absolute;
+    z-index: 1;
     top: -12px;
-    left: 200px;
+    left: 192px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: @white-color;
+    border: 1px solid @border-radio-button;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .sample__bar {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 205px;
     width: 8px;
     height: 8px;
-    background-color: @color-link;
-    border: 10px solid @white-color;
     border-radius: 50%;
+    background-color: @color-link;
   }
 }
 
@@ -407,6 +445,16 @@
     padding-top: 78px;
     padding-bottom: 0;
     background-color: @white-color;
+  }
+
+  .sample::before {
+    content: "";
+    position: absolute;
+    top: 217px;
+    left: 0;
+    width: 100%;
+    height: 461px;
+    background-color: @background-sample;
   }
 
   .sample__container {
@@ -428,8 +476,7 @@
     font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
     color: @main-color-title;
     text-align: left;
-    padding-bottom: 60px;
-    padding-left: 7px;
+    padding: 3px 0 60px 5px;
     margin: 0;
   }
 
@@ -439,7 +486,7 @@
     align-items: center;
     justify-content: space-between;
     width: 366px;
-    margin-top: 67px;
+    margin-top: 65px;
     margin-left: 6px;
   }
 
@@ -519,7 +566,7 @@
     color: @main-color-title;
     text-transform: uppercase;
     text-align: center;
-    padding: 40px 0 10px 6px;
+    padding: 38px 0 10px 5px;
     width: 325px;
   }
 
@@ -532,7 +579,11 @@
   }
 
   .sample__image {
-    position: static;
+    position: absolute;
+    top: 140px;
+    left: -700px;
+    min-width: 677px;
+    height: 515px;
   }
 
   .sample__cat {
@@ -543,7 +594,8 @@
   }
 
   .sample__defference {
-    margin: -48px -5px 0 auto;
+    position: static;
+    margin: -50px -5px 0 auto;
     width: 570px;
     height: 16px;
   }
@@ -570,16 +622,39 @@
     height: 6px;
     background-color: @range-left;
     border-radius: 6px;
+    cursor: pointer;
   }
 
   .sample__range-toggle {
     position: absolute;
+    z-index: 1;
     top: -12px;
     left: 200px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: @white-color;
+    border: 1px solid @border-radio-button;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      background-color: @white-color;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border: 2px solid rgb(104, 183, 56);
+    }
+  }
+
+  .sample__bar {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 212px;
     width: 8px;
     height: 8px;
-    background-color: @color-link;
-    border: 10px solid @white-color;
     border-radius: 50%;
+    background-color: @color-link;
   }
 }

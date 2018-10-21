@@ -1,11 +1,22 @@
 .selection-comment__title {
+  position: relative;
   font-size: 24px;
   font-weight: 300;
   line-height: 24px;
   font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
   color: @main-color-title;
   text-align: left;
-  margin: 28px 0 34px 0;
+  margin: 27px 0 34px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 142px;
+    width: 158px;
+    height: 3px;
+    background-color: @color-link;
+  }
 }
 
 .selection-comment__textarea {
@@ -18,7 +29,7 @@
   font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
   text-transform: uppercase;
   border: 1px solid @border-input;
-  padding: 15px 0 0 15px;
+  padding: 12px 0 0 15px;
   box-sizing: border-box;
 }
 
@@ -37,6 +48,26 @@
     color: @main-color-title;
     text-align: left;
     margin: 15px 0 75px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: -70px;
+      width: 30px;
+      height: 3px;
+      background-color: @color-link;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: 220px;
+      width: 480px;
+      height: 3px;
+      background-color: @color-link;
+    }
   }
 
   .selection-comment__textarea {

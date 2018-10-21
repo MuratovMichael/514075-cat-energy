@@ -1,11 +1,26 @@
+.selection-extra__container {
+  margin-left: -20px;
+}
+
 .selection-extra__title {
+  position: relative;
   font-size: 24px;
   font-weight: 300;
   line-height: 24px;
   font-family: "Oswald-Regular", "Arial", "Verdana", sans-serif;
   color: @main-color-title;
   text-align: left;
-  margin: 25px 0 35px 0;
+  margin: 24px 0 35px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 165px;
+    width: 135px;
+    height: 3px;
+    background-color: @color-link;
+  }
 }
 
 .selection-extra__wrapper {
@@ -16,7 +31,7 @@
 }
 
 .selection-extra__input {
-  display: none;
+  opacity: 0;
 }
 
 .selection-extra__label {
@@ -30,7 +45,7 @@
   text-align: left;
   text-transform: uppercase;
   margin-right: auto;
-  padding-left: 50px;
+  padding-left: 45px;
   padding-top: 5px;
 
   &::before {
@@ -38,8 +53,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border: 1px solid @border-checkbox-button;
   }
 
@@ -72,6 +87,7 @@
   height: 40px;
   background-color: @color-link;
   color: @white-color;
+  font-size: 16px;
   text-transform: uppercase;
   border: none;
   margin-top: 40px;
@@ -97,6 +113,7 @@
   }
 
   .selection-extra__title {
+    position: relative;
     font-size: 36px;
     font-weight: 300;
     line-height: 36px;
@@ -104,6 +121,26 @@
     color: @main-color-title;
     text-align: left;
     margin: 25px 0 60px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: -70px;
+      width: 30px;
+      height: 3px;
+      background-color: @color-link;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: 255px;
+      width: 445px;
+      height: 3px;
+      background-color: @color-link;
+    }
   }
 
   .selection-extra__wrapper {
@@ -112,6 +149,7 @@
     justify-content: space-between;
     width: 285px;
     margin-bottom: 45px;
+    margin-left: -20px;
   }
 
   .selection-extra__wrapper:nth-child(even) {
@@ -119,7 +157,7 @@
   }
 
   .selection-extra__input {
-    display: none;
+    opacity: 0;
   }
 
   .selection-extra__label {
@@ -168,7 +206,7 @@
     text-transform: uppercase;
     border: none;
     font-size: 20px;
-    margin: 40px 60px 0 0;
+    margin: 40px 60px 0 -7px;
   }
 
   .selection-extra__input:checked + .selection-extra__label::after {
@@ -208,7 +246,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1220px;
+    width: 1120px;
     margin-left: 8px;
   }
 
@@ -248,24 +286,24 @@
     align-items: center;
     justify-content: space-between;
     width: 245px;
-    margin-bottom: 45px;
-    margin-top: -3px;
-  }
-
-  .selection-extra__wrapper:nth-child(even) {
-    margin-left: 60px;
+    margin: -3px 0 45px -30px;
+    box-sizing: border-box;
   }
 
   .selection-extra__wrapper:nth-child(2) {
-    margin-right: -20px;
+    margin-left: -55px;
   }
 
   .selection-extra__wrapper:nth-child(3) {
-    margin-left: 80px;
+    margin-left: -85px;
+  }
+
+  .selection-extra__wrapper:nth-child(4) {
+    margin-left: 0;
   }
 
   .selection-extra__input {
-    display: none;
+    opacity: 0;
   }
 
   .selection-extra__label {
@@ -302,6 +340,10 @@
     }
   }
 
+  input[type="checkbox"]:focus + label {
+    outline: rgb(59, 153, 252) auto 1px;
+  }
+
   .selection-extra__label:last-child {
     margin-right: 0;
   }
@@ -319,6 +361,7 @@
     border: none;
     font-size: 20px;
     margin: 50px 80px 0 0;
+    cursor: pointer;
   }
 
   .selection-extra__input:checked + .selection-extra__label::after {
@@ -328,6 +371,22 @@
     border: 1px solid @color-link;
     border-top-style: none;
     border-right-style: none;
+  }
+
+  .selection-extra__label:active {
+    opacity: 0.3;
+  }
+
+  .selection-extra__label:hover::before {
+    border: 1px solid @radio-hover;
+  }
+
+  .selection-extra__label:active::before {
+    opacity: 0.3;
+  }
+
+  .selection-extra__input:checked + .selection-extra__label:active::after {
+    opacity: 0.3;
   }
 
   .selection-extra__required {
